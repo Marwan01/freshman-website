@@ -35,31 +35,8 @@
           <strong>any feedback.</strong>
         </h2>
         
-        <!-- <hr class="divider">
-        <div class="row">
-          <div class="col-lg-8">
-            <div class="embed-responsive embed-responsive-16by9 map-container mb-4 mb-lg-0">
-              <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <h5 class="mb-0">Phone:</h5>
-            <div class="mb-4">(312) 810-4949</div>
-            <h5 class="mb-0">Email:</h5>
-            <div class="mb-4">
-              <a href="mailto:marwanes">name@example.com</a>
-            </div>
-            <h5 class="mb-0">Address:</h5>
-            <div class="mb-4">
-              3481 Melrose Place
-              <br>
-              Beverly Hills, CA 90210
-            </div>
-          </div>
-        </div>
-      </div>  -->
 
-      <div class="bg-faded p-4 my-4">
+      <!-- <div class="bg-faded p-4 my-4">
         <hr class="divider">
         <h2 class="text-center text-lg text-uppercase my-0">Contact Form
         </h2>
@@ -67,20 +44,46 @@
         <form>
           <div class="row">
             <div class="form-group col-lg-4">
+                <form 
+                id= "gform"
+                method="POST"
+                action="https://script.google.com/macros/s/AKfycbzZE5f5NbQDdKmJ8XoBloAH_1nuX7TGtGGu8_bFRIkfkRtYI78/exec">
+
               <label class="text-heading">Name</label>
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" name="VisitorName">
             </div>
             <div class="form-group col-lg-4">
               <label class="text-heading">Email Address</label>
-              <input type="email" class="form-control">
+              <input type="email" class="form-control" name="VisitorEmail">
             </div>
             <div class="clearfix"></div>
             <div class="form-group col-lg-12">
               <label class="text-heading">Message</label>
-              <textarea class="form-control" rows="6"></textarea>
+              <textarea class="form-control" name="VisitorComment" rows="6"></textarea>
             </div>
             <div class="form-group col-lg-12">
               <button type="submit" class="btn btn-secondary">Submit</button>
+            </form>
+            <form id="gform"method="POST" action="https://script.google.com/macros/s/AKfycbzZE5f5NbQDdKmJ8XoBloAH_1nuX7TGtGGu8_bFRIkfkRtYI78/exec"> -->
+
+
+              <form id="gform"
+              action="https://script.google.com/macros/s/AKfycbzZE5f5NbQDdKmJ8XoBloAH_1nuX7TGtGGu8_bFRIkfkRtYI78/exec"
+              method="POST"
+              enctype="multipart/form-data"
+              >
+            
+            Your Name:<br>
+            <input type="text" size="20" name="name"><br><br>
+            
+            Your Comment:<br>
+            <textarea name="message" rows="4" cols="20">
+            </textarea><br><br>
+            
+            <input type="submit" value="Email This Form">
+            
+            </form>
+
             </div>
           </div>
         </form>
